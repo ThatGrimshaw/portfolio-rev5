@@ -1,0 +1,416 @@
+/* undoing what was once done */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, main section.contact, main section.about, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main section.contact, main section.about {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  spacing: 0;
+}
+
+img, iframe {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+input, textarea, select {
+  font: inherit;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  border-radius: none;
+}
+
+@font-face {
+  font-family: "Cirka";
+  src: url("assets/fonts/cirka/Cirka-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cirka";
+  src: url("/assets/fonts/cirka/Cirka-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Recursive";
+  src: url("/assets/fonts/recursive/Recursive_VF_1.084.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("/assets/fonts/manrope/Manrope[wght].woff2") format("woff2"), url("/assets/fonts/manrope/Manrope[wght].ttf") format("truetype");
+}
+h1 {
+  font-family: "Cirka";
+  font-size: 20rem;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  color: #0A0010;
+  line-height: 0.8;
+}
+
+h2 {
+  font-family: "Cirka";
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #0A0010;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Manrope";
+  font-size: 3rem;
+  font-variation-settings: "wght" 100;
+  line-height: 1;
+  color: #FFC52F;
+}
+
+h4 {
+  font-family: "Manrope";
+  font-size: 6rem;
+  font-variation-settings: "wght" 500;
+  line-height: 1;
+  color: #0A0010;
+}
+
+h5 {
+  font-family: "Recursive";
+  font-size: 3rem;
+  font-variation-settings: "wght" 350, "slnt" -15, "MONO" 0, "CASL" 1, "CRSV" 1;
+  line-height: 1;
+  color: #0A0010;
+}
+
+p {
+  font-family: "Manrope";
+  font-size: 2.5rem;
+  font-variation-settings: "wght" 400;
+  color: #0A0010;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+p strong {
+  font-variation-settings: "wght" 700;
+}
+
+html {
+  font-family: "Manrope";
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+body {
+  background: #F2EBED;
+  padding: 4rem;
+  color: #0A0010;
+}
+
+nav {
+  background: #FF4DA5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid #0A0010;
+  border-radius: 1rem;
+  z-index: 10;
+  left: 4rem;
+  right: 4rem;
+  top: 4rem;
+  height: 7rem;
+  box-sizing: border-box;
+}
+nav .nav-button {
+  border: 1px solid #0A0010;
+  border-radius: 0.5rem;
+  padding: 1.75rem 2rem;
+  font-family: "Recursive";
+  font-size: 2rem;
+  font-variation-settings: "wght" 400, "slnt" -15, "MONO" 1, "CASL" 1, "CRSV" 1;
+  line-height: 0.8;
+  color: #0A0010;
+  letter-spacing: -0.5px;
+  box-sizing: content-box;
+  margin: 1rem;
+  transition: 0.2s;
+}
+nav .nav-button:hover {
+  background: #0A0010;
+  color: #F2EBED;
+}
+nav .nav-button.friend {
+  background: #0A0010;
+  box-sizing: border-box;
+  padding: 0.75rem;
+}
+
+main section, main section.contact, main section.about {
+  border-radius: 1rem;
+  margin-bottom: 4rem;
+  border: 1px solid #0A0010;
+  border-radius: 1rem;
+}
+main section div.section-title {
+  padding: 0 2rem 1rem 2rem;
+  border: 1px solid #0A0010;
+  border-radius: 1rem;
+  display: inline-block;
+  margin: 4rem 0 3rem 4rem;
+}
+main section div.contents {
+  padding: 0 4rem 4rem 4rem;
+}
+main section.about {
+  border: 1px solid #E41A48;
+  color: #E41A48;
+}
+main section.about div.section-title {
+  border-color: #E41A48;
+}
+main section.about div.section-title h2 {
+  color: #E41A48;
+}
+main section.contact {
+  border: 1px solid #1071F9;
+  color: #1071F9;
+}
+main section.contact div.section-title {
+  border-color: #1071F9;
+}
+main section.contact div.section-title h2 {
+  color: #1071F9;
+}
+main section.hero {
+  margin-top: 2rem;
+  width: 100%;
+  height: calc(100VH - 17rem);
+  background: center/cover url("/assets/images/hero_grid.svg"), #0A0010;
+  box-shadow: inset 0px 0px 0px 3rem #0A0010;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main section.hero div.hero-wrapper {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+main section.hero h1 {
+  position: relative;
+  z-index: 0;
+  background: transparent;
+  font-size: clamp(88px, 5.5rem + (1vw - 3.6px) * 11.954, 504px);
+  color: #0A0010;
+  display: inline-block;
+  text-align: center;
+}
+main section.hero h1:before {
+  content: attr(title);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: 2px #FFC52F;
+}
+main section.hero h1:after {
+  content: attr(title);
+  position: absolute;
+  -webkit-text-stroke: clamp(8px, 0.5rem + (1vw - 3.6px) * 1.8391, 72px) #0A0010;
+  z-index: -2;
+  top: 0;
+  left: 0;
+}
+main section.hero h3 {
+  position: relative;
+  z-index: 0;
+  font-size: clamp(20px, 1.25rem + (1vw - 3.6px) * 1.4943, 72px);
+  background: transparent;
+  margin-top: clamp(20px, 1.25rem + (1vw - 3.6px) * 1.4943, 72px);
+  display: inline-block;
+  text-align: center;
+}
+main section.hero h3:after {
+  content: attr(title);
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  top: 0;
+  -webkit-text-stroke: 2rem #0A0010;
+}
+main section.projects article {
+  padding: 4rem;
+  border-top: 1px solid #0A0010;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+main section.projects article div.project-name {
+  cursor: pointer;
+}
+main section.projects article div.project-name h5 {
+  margin-top: 1rem;
+}
+main section.projects article .active {
+  background: transparent;
+}
+main section.projects article div.project-body {
+  border-radius: 1rem;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background: #0A0010;
+  margin-top: 2rem;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+}
+main section.about div.contents {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+main section.about div.contents div.headshot-wrapper {
+  flex: 1;
+  height: auto;
+  align-self: stretch;
+  overflow: hidden;
+  display: block;
+  border: 1px solid #0A0010;
+  border-radius: 1rem;
+}
+main section.about div.contents div.headshot-wrapper img {
+  object-fit: cover;
+}
+main section.about div.contents div.bio {
+  flex: 1;
+}
+main section.contact a {
+  color: #1071F9;
+}
+main section.contact div.form-container {
+  border: 1px solid #0A0010;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+main section.contact div.form-container form {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+  position: relative;
+}
+main section.contact div.form-container form label {
+  background: #1071F9;
+  border-bottom: 1px solid #0A0010;
+  font-family: "Recursive";
+  font-variation-settings: "wght" 700, "slnt" -15, "MONO" 0, "CASL" 1, "CRSV" 1;
+  font-size: 2.5rem;
+  color: #F2EBED;
+  line-height: 1;
+  padding: 2rem;
+}
+main section.contact div.form-container form label:nth-child(5) {
+  border-bottom: none;
+}
+main section.contact div.form-container form input#name,
+main section.contact div.form-container form input#email,
+main section.contact div.form-container form textarea {
+  background: #F2EBED;
+  color: #0A0010;
+  border-style: none;
+  border-bottom: 1px solid #0A0010;
+  padding: 12px;
+  font-family: "Manrope";
+  font-size: 2.5rem;
+  font-line-height: 1.5;
+}
+main section.contact div.form-container form textarea#message {
+  height: 216px;
+  resize: none;
+  margin: 0 0 -1px 0;
+}
+main section.contact div.form-container form input#submit {
+  background-color: #1071F9;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.embla {
+  overflow: hidden;
+  position: relative;
+}
+
+.embla__container {
+  display: flex;
+  max-height: calc(100VH - 20rem);
+}
+
+.embla__slide {
+  position: relative;
+  flex: 0 0 100%;
+  color: #F2EBED;
+}
+.embla__slide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.embla__button {
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.embla__button--next {
+  bottom: 2rem;
+  right: 2rem;
+}
+
+.embla__button--prev {
+  bottom: 2rem;
+  right: 10rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
